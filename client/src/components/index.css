@@ -1,0 +1,61 @@
+.form{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-div{
+    background-color: transparent;
+    backdrop-filter: blur(6px);
+    border:2px solid black;
+    width:400px;
+    height:350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 30px;
+}
+.user{
+    display: block;
+    background: transparent;
+    padding:10px 20px;
+    margin:5px 50px;
+    border: 1px solid black;
+    color:black;
+    border-radius: 5px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.user::placeholder{
+    color:white;
+}
+.submit{
+    background-color: blue;
+    cursor: pointer;
+    border:none;
+    padding:10px;
+    border-radius: 20px;
+    color:white;
+    margin: 23px 50px 10px 50px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.register-text{
+    margin-left:80px;
+}
+.Login-button{
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+    border:none;
+    font-weight: bold;
+    color: white;
+}
+.Login-text{
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin:20px 0px;
+    color: white;
+}

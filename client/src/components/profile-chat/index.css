@@ -1,0 +1,449 @@
+.chat-box{
+    display:flex;
+    height: 100%;
+
+}
+.contacts-box{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0leO2uccocbNLmlGje86OFP7dUhn0TNB8Vg&s);
+    background-repeat: no-repeat;
+    background-size:cover;
+    width:380px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.message-part{
+    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    height:100vh;
+    background-image: url(https://img.freepik.com/free-photo/orange-background_23-2147674307.jpg?semt=ais_hybrid);
+    background-size: cover;
+    flex:1;
+}
+.send-part{
+    display: flex;
+    height: 45px;
+    flex:3/4;
+    background-color: transparent;
+    margin: 10px;
+}
+.text-box{
+    flex:1;
+    padding-left:20px;
+    margin-right:3px;
+    font-size: 20px;
+}
+.image{
+    width:35px;
+    height: 35px;
+}
+.button{
+    background-color: blue;
+    border-radius:4px;
+    color:white;
+    border:none;
+    padding:2px 2px 2px 3px;
+}
+.name{
+    display: inline-block;
+    cursor: pointer;
+}
+.person{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    gap: 8px;
+    padding-right:5px;
+    padding-top:2px;
+    padding-bottom: 2px;;
+    margin-top:5px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+.modified-person{
+    padding-top:3px;
+    padding-bottom:3px;
+    border-top:2px solid black;
+    border-bottom: 2px solid black;
+}
+.style-line{
+    width:5px;
+    height:60px;
+    background-color: darkblue;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius:45px;
+}
+.first{
+    flex:1;
+}
+.messages-box{
+    display:flex;
+    flex-direction: column;
+    flex:9;
+    position:relative;
+    /* padding:10px; */
+    overflow-y: auto;
+}
+.select{
+    font-size: 20px;
+    text-align: center;
+    color:blue;
+}
+.mydata{
+    display: inline-block;
+    font-size:20px;
+    padding:12px;
+    margin:5px;
+    border-radius: 8px;
+    background-color: rgb(194, 255, 194);
+    box-shadow: 1px 1px 2px;
+}
+.theredata{
+    display: inline-block;
+    padding:12px;
+    font-size: 20px;
+    margin:5px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 1px 1px 2px;
+}
+.right{
+    display: block;
+    text-align: right;  
+}
+.left{
+   display: block;
+}
+.scroll{
+    position: relative;
+}
+.line{
+    display: block;
+    overflow-y: auto;
+}
+.line1{
+    display: block;
+    overflow-y: auto;
+    height:320px;
+    background-size: cover;
+}
+.line1::-webkit-scrollbar{
+    width:10px;
+}
+.line1::-webkit-scrollbar-thumb{
+    background-color:#dbdbdb;
+    border-radius:4px ;
+}
+.line1::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(187, 181, 181);
+}
+.online-offline{
+    flex-grow: 1;
+}
+.logout-button{
+    background-color: rgb(226, 19, 19);
+    padding:10px 13px;
+    border:none;
+    border-radius:10px;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow:0px 0px 9px rgb(226, 19, 19);
+    cursor: pointer;
+}
+.logout-div{
+    display: flex;
+    flex-direction: column;
+    border:3px solid white;
+    padding:10px 0;
+    margin:5px 100px;
+    border-radius: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.username{
+    font-size: 15px;
+    color:blue;
+    font-weight: 600;
+}
+.name-icon{
+    display: flex;
+}
+.size-6{
+    width:28px;
+    color:white;
+}
+.file{
+    display: none;
+}
+.file-style{
+    color:black;
+}
+.file-link{
+    color:black;
+    width:19px;
+}
+.search-contacts{
+    padding:8px 15px;
+    width:300px;
+    font-size: 16px;
+    margin-left:30px;
+    margin-bottom: 20px;
+}
+.contact-heading{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    color:white;
+    font-size: 20px;
+}
+h3{
+    padding-bottom:10px;
+}
+.top-head{
+    background-color: white;
+    padding:0px 8px;
+    margin-left:1px;
+    margin-top:0px;
+    line-height: 60px;
+    position: fixed;
+    left:380px;
+    right:0px;
+    box-shadow: 1px 1px 1px;
+}
+.top-head-username{
+    display: inline-block;
+    margin-right: 8px;
+}
+.top-name{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding:1px 0px;
+    margin:0px 0px;
+}
+.lable{
+    margin-right:2px;
+    padding:4px;
+    background-color: green;
+    border-radius: 5px;
+}
+.FriendsContainer{
+    height: 130px;
+    overflow-x:auto;
+    white-space: nowrap;
+    display: flex;
+}
+.FriendsContainer::-webkit-scrollbar{
+    height: 10px;
+}
+.FriendsContainer::-webkit-scrollbar-thumb{
+    background-color:#010059;
+    border-radius:4px ;
+}
+.FriendsContainer::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(74, 76, 160);
+}
+.friend{
+    display: flex;
+    flex-direction: column;
+    border:1px solid black;
+    background-color: white;
+    margin:1px 3px;
+    justify-content: center;
+    align-items: center;
+    padding:10px 20px;
+}
+.friend-name{
+    display: block;
+    font-size:20px;
+}
+.add{
+    background-color: transparent;
+    margin-top: 3px;
+    background-color: green;
+    box-shadow: 0px 0px 7px green;
+    color:white;
+    border-radius:4px;
+}
+.catchUp{
+    font-size:25px;
+    text-align:center;
+}
+.allFriends{
+    font-size:24px;
+    margin-bottom:50px;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+}
+/*css for mobile view*/
+/*
+@media (max-width: 768px) {
+    .chat-box {
+        display: block;
+        height: auto;
+    }
+    .line1{
+        display: block;
+        overflow-y: auto;
+        max-height:320px;
+        background-size: cover;
+    }
+
+    .contacts-box {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .message-part {
+        display: none;
+        height: auto;
+    }
+
+   .message-part {
+        display: block;
+    }
+
+    .top-head {
+        position: static;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .search-contacts {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .logout-div {
+        margin: 10px auto;
+    }
+
+}*/
+
+
+@media (max-width: 768px) {
+    .chat-box {
+        display: block;
+        height: auto;
+    }
+
+    .contacts-box {
+        width: 100%;
+    }
+
+    .message-part {
+        display: none;
+        min-height:100vh;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        padding-bottom: 10px;
+        flex-direction: column;
+    }
+
+   .message-part {
+        display: flex;
+    }
+    .first{
+        flex:0.1;
+    }
+    .top-head {
+        position: sticky;
+        top: 0;
+        
+        width: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+
+    .messages-box {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        max-height: 77vh;
+        background-size: cover;
+    }
+
+    .send-part {
+        height: auto;
+        flex: none;
+        margin: 5px 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .text-box {
+        flex: 1;
+        padding: 8px 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        margin-right: 5px;
+    }
+
+    .button {
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .mydata, .theredata {
+        font-size: 16px;
+        padding: 8px;
+        margin: 4px 0;
+        word-wrap: break-word;
+        max-width: 80%;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .left {
+        text-align: left;
+    }
+
+
+
+    .search-contacts {
+        width: 95%;
+        margin: 10px 10px;
+        font-size: 16px;
+    }
+
+    .logout-div {
+        margin: 4px 100px 10px 100px;
+    }
+
+    .FriendsContainer {
+        height: 120px;
+    }
+
+    .friend {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    .back{
+        color:white;
+        padding:5px 10px;
+        font-size:16px;
+        background-color: blue;
+        border:none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px blue;
+        margin-left:200px;
+    }
+}
+
