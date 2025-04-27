@@ -27,6 +27,11 @@ mongoose.connect(process.env.MONGO_URL,).then(() => {
     process.exit(1); // Exit the process with failure
 });
 
+app.use(cors({
+    credentials:true,
+    origin:"https://680cfdd702c7dd50a102bfe7--flourishing-pixie-008cf8.netlify.app",
+}));
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname =  path.dirname(__filename);
 
@@ -39,11 +44,6 @@ const app = express();
 app.use('/uploads',express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
 app.use(cookieParser());
-
-app.use(cors({
-    credentials:true,
-    origin:"https://680cfdd702c7dd50a102bfe7--flourishing-pixie-008cf8.netlify.app",
-}));
 
 function getUserDataFromRequest(req){
     return new Promise((resolve, reject) => {
