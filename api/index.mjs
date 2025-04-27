@@ -19,6 +19,9 @@ dotenv.config();
 
 const app = express();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname =  path.dirname(__filename);
+
 app.use(cors({
     credentials:true,
     origin:"https://680cfdd702c7dd50a102bfe7--flourishing-pixie-008cf8.netlify.app",
@@ -41,8 +44,6 @@ mongoose.connect(process.env.MONGO_URL,).then(() => {
 });
 
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname =  path.dirname(__filename);
 
 const jwtsecret=process.env.jwt_Secret;
 
