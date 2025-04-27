@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: "https://ultra-chat-app.onrender.com",
+  baseURL: "https://mern-chat-backend1-9zu0.onrender.com",
   withCredentials: true,
 });
 
