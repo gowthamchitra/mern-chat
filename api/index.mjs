@@ -107,9 +107,10 @@ app.get('/profile',(req,res)=>{
     jwt.verify(token,jwtsecret,{},(err,Userdata)=>{
         if(err) throw err;
         console.log(Userdata);
-        res.json(Userdata);
+        return res.json(Userdata);
     });
     }
+    return res.status(401).json({ error: 'Unauthorized' });
 });
 
 app.post('/login',async (req,res)=>{
