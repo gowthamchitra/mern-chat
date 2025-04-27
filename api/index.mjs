@@ -42,7 +42,7 @@ app.use(cookieParser());
 
 app.use(cors({
     credentials:true,
-    origin:process.env.CLIENT_URL,
+    origin:"https://680cfdd702c7dd50a102bfe7--flourishing-pixie-008cf8.netlify.app",
 }));
 
 function getUserDataFromRequest(req){
