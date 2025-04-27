@@ -24,6 +24,11 @@ app.use(cors({
     origin:"https://680cfdd702c7dd50a102bfe7--flourishing-pixie-008cf8.netlify.app",
 }));
 
+
+app.use('/uploads',express.static(path.join(__dirname, 'uploads')));
+app.use(express.json());
+app.use(cookieParser());
+
 /*mongoose.connect(process.env.MONGO_URL,(err)=>{
     if (err) throw err;
     console.log('MongoDb connected')
@@ -42,10 +47,6 @@ const __dirname =  path.dirname(__filename);
 const jwtsecret=process.env.jwt_Secret;
 
 const bcrypt1=bcrypt.genSaltSync(10);
-
-app.use('/uploads',express.static(path.join(__dirname, 'uploads')));
-app.use(express.json());
-app.use(cookieParser());
 
 function getUserDataFromRequest(req){
     return new Promise((resolve, reject) => {
