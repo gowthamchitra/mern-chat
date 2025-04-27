@@ -101,17 +101,21 @@ app.get('/people',async (req,res)=>{
    res.json(users);
 });
 
-app.get('/profile',(req,res)=>{
-    const token =req.cookies?.token;
-    if(token){
-    jwt.verify(token,jwtsecret,{},(err,Userdata)=>{
-        if(err) throw err;
-        console.log(Userdata);
-        return res.json(Userdata);
-    });
+app.get('/profile', (req, res) => {
+    const token = req.cookies?.token;
+    if (!token) {
+        return res.status(401).json({ error: 'Unauthorized' });
     }
-    return res.status(401).json({ error: 'Unauthorized' });
+
+    jwt.verify(token, jwtsecret, {}, (err, userData) => {
+        if (err) {
+            console.error('JWT verify error:', err);
+            return res.status(403).json({ error: 'Token invalid' });
+        }
+        res.json(userData);
+    });
 });
+
 
 app.post('/login',async (req,res)=>{
     const {username,password} = req.body;
