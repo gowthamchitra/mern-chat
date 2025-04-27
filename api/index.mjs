@@ -27,6 +27,9 @@ mongoose.connect(process.env.MONGO_URL,).then(() => {
     process.exit(1); // Exit the process with failure
 });
 
+
+const app = express();
+
 app.use(cors({
     credentials:true,
     origin:"https://680cfdd702c7dd50a102bfe7--flourishing-pixie-008cf8.netlify.app",
@@ -38,8 +41,6 @@ const __dirname =  path.dirname(__filename);
 const jwtsecret=process.env.jwt_Secret;
 
 const bcrypt1=bcrypt.genSaltSync(10);
-
-const app = express();
 
 app.use('/uploads',express.static(path.join(__dirname, 'uploads')));
 app.use(express.json());
