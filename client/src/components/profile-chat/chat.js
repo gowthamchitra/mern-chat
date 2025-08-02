@@ -233,7 +233,7 @@ function Chat () {
     delete onlinePeopleExclOurUser[id];
 
     const filteredonlinePeopleExclOurUser=Object.keys(onlinePeopleExclOurUser).filter(userId=>
-        onlinePeopleExclOurUser[userId].toLowerCase().includes(searchContacts.toLowerCase())
+        onlinePeopleExclOurUser[userId]?.toLowerCase().includes(searchContacts.toLowerCase())
     );
 
     const filteredOfflinePeople=Object.keys(offlinePeople).filter(userId=>
