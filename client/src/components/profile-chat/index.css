@@ -232,7 +232,7 @@ h3{
     border-radius: 5px;
 }
 .FriendsContainer{
-    height: 130px;
+    height: 230px;
     overflow-x:auto;
     white-space: nowrap;
     display: flex;
