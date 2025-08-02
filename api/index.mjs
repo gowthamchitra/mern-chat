@@ -45,7 +45,7 @@ mongoose.connect(process.env.MONGO_URL,).then(() => {
 
 
 
-const jwtsecret=process.env.jwt_Secret;
+const jwtsecret=process.env.JWT_SECRET;
 
 const bcrypt1=bcrypt.genSaltSync(10);
 
