@@ -338,6 +338,10 @@ h3{
         width: 100%;
     }
 
+    .line1{
+        height:360px;
+    }
+
     .message-part {
         display: none;
         min-height:100vh;
