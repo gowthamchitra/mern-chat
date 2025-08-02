@@ -30,7 +30,7 @@ function Chat () {
     },[]);
 
     function connectToWs(){
-       const ws= new WebSocket('ws://localhost:4040');
+       const ws= new WebSocket('ws://https://mern-chat-backend1-9zu0.onrender.com');
        setWs(ws);
        ws.addEventListener('message', (e) => {
         console.log("e.data:"+e.data);
