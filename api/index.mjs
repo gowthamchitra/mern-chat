@@ -24,7 +24,7 @@ const __dirname =  path.dirname(__filename);
 
 app.use(cors({
     credentials:true,
-    origin:"https://flourishing-pixie-008cf8.netlify.app/",
+    origin:"https://flourishing-pixie-008cf8.netlify.app",
 }));
 
 
