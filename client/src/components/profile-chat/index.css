@@ -341,6 +341,9 @@ h3{
     .line1{
         height:380px;
     }
+    .top-name{
+        display: inline-block;
+    }
 
     .message-part {
         display: none;
