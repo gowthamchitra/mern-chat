@@ -227,6 +227,10 @@ wss.on('connection',(connection ,req)=>{
 
 connection.on("message", async (message) => {
     console.log("it is moving to the backend");
+    if (!connection.userId) {
+        console.warn("❌ Message rejected: user not authenticated.");
+        return;
+    }
     try {
         const messageData = JSON.parse(message.toString());
         const { recipient, text, file, type } = messageData;
