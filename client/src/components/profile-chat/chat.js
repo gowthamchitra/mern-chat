@@ -160,7 +160,7 @@ function Chat () {
       }
       useEffect(() => {
         fetchFriends();
-        const intervalId=setInterval(fetchFriends,10000);
+        const intervalId=setInterval(fetchFriends,1000);
 
         return ()=>clearInterval(intervalId);
       }, []);
@@ -204,7 +204,7 @@ function Chat () {
                 });
             };
             fetchMessages(); // Initial fetch
-            interval = setInterval(fetchMessages, 7000); // Repeat every 1 seconds
+            interval = setInterval(fetchMessages, 1000); // Repeat every 1 seconds
         }
         return () => clearInterval(interval);
     },[selectedUser]);
