@@ -160,7 +160,7 @@ function Chat () {
       }
       useEffect(() => {
         fetchFriends();
-        const intervalId=setInterval(fetchFriends,1000);
+        const intervalId=setInterval(fetchFriends,10000);
 
         return ()=>clearInterval(intervalId);
       }, []);
