@@ -359,7 +359,7 @@ function Chat () {
                                     <div className='top-head-username'>
                                         <Avatar username={onlinePeopleExclOurUser[selectedUser]} userId={selectedUser} online={true} />
                                     </div>
-                                     <p className='top-name'>{onlinePeopleExclOurUser[selectedUser]}</p>
+                                     <div className='top-name'>{onlinePeopleExclOurUser[selectedUser]}</div>
                                      <button type="button" className='back' onClick={()=>setSelectedUser(null)}>
                                         Back
                                      </button>
